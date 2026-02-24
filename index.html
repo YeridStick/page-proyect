@@ -16,6 +16,19 @@
 </head>
 
 <body>
+    <!-- Background Decorations -->
+    <div class="bg-decorations" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+    </div>
+
+    <!-- Modal State Toggle -->
+    <input type="checkbox" id="modal-toggle" class="modal-state-input">
+
     <header class="navbar">
         <div class="container">
             <div class="logo">Logo<span>Type</span></div>
@@ -64,7 +77,7 @@
                 </div>
                 <div class="dest-grid">
                     <!-- Row 1 -->
-                    <div class="dest-card reveal-on-scroll">
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=600"
                                 alt="Placeholder">
@@ -73,8 +86,8 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
-                    <div class="dest-card reveal-on-scroll">
+                    </label>
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.pexels.com/photos/5273347/pexels-photo-5273347.jpeg"
                                 alt="Placeholder">
@@ -83,8 +96,8 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
-                    <div class="dest-card reveal-on-scroll">
+                    </label>
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.pexels.com/photos/3879070/pexels-photo-3879070.jpeg"
                                 alt="Placeholder">
@@ -93,8 +106,8 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
-                    <div class="dest-card reveal-on-scroll">
+                    </label>
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=600"
                                 alt="Placeholder">
@@ -103,9 +116,9 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
+                    </label>
                     <!-- Row 2 -->
-                    <div class="dest-card reveal-on-scroll">
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600"
                                 alt="Placeholder">
@@ -114,8 +127,8 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
-                    <div class="dest-card reveal-on-scroll">
+                    </label>
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600"
                                 alt="Placeholder">
@@ -124,8 +137,8 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
-                    <div class="dest-card reveal-on-scroll">
+                    </label>
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600"
                                 alt="Placeholder">
@@ -134,8 +147,8 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
-                    <div class="dest-card reveal-on-scroll">
+                    </label>
+                    <label for="modal-toggle" class="dest-card reveal-on-scroll">
                         <div class="dest-img">
                             <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600"
                                 alt="Placeholder">
@@ -144,7 +157,7 @@
                             <h3>Ejemplo título</h3>
                             <p>Ejemplo destino</p>
                         </div>
-                    </div>
+                    </label>
                 </div>
             </div>
         </section>
@@ -273,6 +286,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- Pure CSS Modal -->
+    <div class="modal-overlay">
+        <div class="modal-card">
+            <label for="modal-toggle" class="modal-close"><i data-lucide="x"></i></label>
+            <div class="modal-image">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800" alt="Detalle">
+            </div>
+            <div class="modal-content">
+                <span class="category">Información Detallada</span>
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Voluptatibus, architecto
+                    sapiente. Dolores, placeat. Necessitatibus, voluptatum. Quisquam, quos.</p>
+                <div class="modal-features">
+                    <div class="feature-item"><i data-lucide="clock"></i> <span>Lorem ipsum</span></div>
+                    <div class="feature-item"><i data-lucide="map-pin"></i> <span>Dolor sit</span></div>
+                    <div class="feature-item"><i data-lucide="star"></i> <span>Amet consectetur</span></div>
+                </div>
+                <button class="primary-btn">Lorem Ipsum</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         lucide.createIcons();
