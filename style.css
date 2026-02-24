@@ -662,35 +662,107 @@ body::after {
     z-index: 9999;
 }
 
-/* --- Mobile Responsive --- */
+/* --- Performance Optimizations --- */
 
-@media (max-width: 992px) {
+.reveal-on-scroll,
+.dest-card,
+.story-item,
+.hero-image-cluster img {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
 
-    .hero-section .container,
-    .stories-layout,
-    .highlights-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+img {
+    content-visibility: auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* --- Mobile Responsive Refinement --- */
+
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 95%;
     }
 
-    .hero-content {
-        text-align: center;
-    }
-
-    .hero-content p {
-        margin: 0 auto 2.5rem;
-    }
-
-    .nav-links {
-        display: none;
+    .hero-section .container {
+        gap: 2rem;
     }
 
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-links {
+        display: none;
+        /* In a real app, we'd add a toggleable mobile menu */
+    }
+
+    .hero-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content p {
+        margin: 0 auto 2rem;
+    }
+
+    .hero-image-cluster {
+        margin-top: 3rem;
+    }
+
+    .dest-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .stories-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .filter-tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .newsletter-card {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .dest-img {
+        height: 250px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
