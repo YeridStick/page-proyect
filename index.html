@@ -26,8 +26,9 @@
         <div class="line line-2"></div>
     </div>
 
-    <!-- Modal State Toggle -->
+    <!-- Modal State Toggles -->
     <input type="checkbox" id="modal-toggle" class="modal-state-input">
+    <input type="checkbox" id="hero-modal-toggle" class="modal-state-input">
 
     <header class="navbar">
         <div class="container">
@@ -53,7 +54,7 @@
                     <p class="fade-in-delay">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris.</p>
-                    <button class="cta-btn fade-in-delay">Botón de Acción</button>
+                    <label for="hero-modal-toggle" class="cta-btn fade-in-delay">Botón de Acción</label>
                 </div>
                 <div class="hero-image-cluster reveal-on-scroll">
                     <div class="cluster-main">
@@ -305,6 +306,32 @@
                     <div class="feature-item"><i data-lucide="star"></i> <span>Amet consectetur</span></div>
                 </div>
                 <button class="primary-btn">Lorem Ipsum</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pure CSS Hero Modal (Form) -->
+    <div class="modal-overlay hero-modal">
+        <div class="modal-card form-card">
+            <label for="hero-modal-toggle" class="modal-close"><i data-lucide="x"></i></label>
+            <div class="modal-content full-width">
+                <h2>Lore Ipsum Form</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <form class="contact-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label>Lorem Ipsum</label>
+                        <input type="text" placeholder="Ej. John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Dolor Sit Amet</label>
+                        <input type="email" placeholder="email@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea placeholder="Escribe algo aquí..."></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn">Enviar Información</button>
+                </form>
             </div>
         </div>
     </div>
